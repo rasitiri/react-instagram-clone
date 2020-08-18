@@ -1,8 +1,8 @@
 import React, { useEffect } from 'react'
 import Form from '../../components/Login/Form'
 import classes from './Login.module.scss'
-import SignUp from '../../components/Login/SignUp'
 import AppBanner from '../../components/Login/AppBanner'
+import Redirect from '../../components/Common/Redirect'
 
 const Login = () => {
   useEffect(() => {
@@ -12,7 +12,11 @@ const Login = () => {
   return (
     <div className={classes.loginContainer}>
       <Form></Form>
-      <SignUp></SignUp>
+      <Redirect
+        text="Don't have an account?"
+        page="Sign up"
+        to="signup"
+      ></Redirect>
       <AppBanner></AppBanner>
     </div>
   )

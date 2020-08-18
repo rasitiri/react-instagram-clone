@@ -4,8 +4,62 @@ $border-color: rgb(219, 219, 219);
 .formContainer {
   display: flex;
   flex-direction: column;
-  margin: 0 auto;
+  margin: 10px auto;
   width: 350px;
   background-color: $white;
   border: 1px solid $border-color;
+
+  & > img {
+    background-color: $white;
+    width: 170px;
+    margin: 0 auto;
+    padding: 35px 0 10px;
+  }
+
+  & > p {
+    color: #8e8e8e;
+    background-color: $white;
+    margin: 0 auto;
+    width: 16rem;
+    text-align: center;
+    font-weight: 700;
+  }
+
+  & .facebookBtn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 16rem;
+    margin: 13px auto 0;
+    border: none;
+    color: white;
+    background-color: #0095f6;
+    padding: 7px 15px;
+    font-weight: 800;
+    font-size: 14px;
+    border-radius: 4px;
+    outline: none;
+    cursor: pointer;
+
+    & > img {
+      width: 21px;
+      color: white;
+      margin-right: 4px;
+      background-color: transparent;
+    }
+  }
+
+  & .policyText {
+    color: #8e8e8e;
+    font-size: 11.7px;
+    font-weight: 500;
+    padding: 0px 0.23rem;
+    margin: 20px auto 35px;
+
+    & > a {
+      text-decoration: none;
+      color: #8e8e8e;
+      font-weight: 600;
+    }
+  }
 }
