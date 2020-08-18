@@ -1,4 +1,6 @@
 import React, { useEffect } from 'react'
+import classes from './Register.module.scss'
+import Form from '../../components/Register/Form'
 
 const Register = () => {
   useEffect(() => {
@@ -6,8 +8,8 @@ const Register = () => {
   }, [])
 
   return (
-    <div>
-      <h1>Register</h1>
+    <div className={classes.registerContainer}>
+      <Form></Form>
     </div>
   )
 }
