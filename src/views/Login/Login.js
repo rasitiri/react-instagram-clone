@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react'
 import Form from '../../components/Login/Form'
 import classes from './Login.module.scss'
-import AppBanner from '../../components/Login/AppBanner'
+import AppBanner from '../../components/Common/AppBanner'
 import Redirect from '../../components/Common/Redirect'
 
 const Login = () => {

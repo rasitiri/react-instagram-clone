@@ -2,7 +2,7 @@ import React, { useEffect } from 'react'
 import classes from './Register.module.scss'
 import Form from '../../components/Register/Form'
 import Redirect from '../../components/Common/Redirect'
-import AppBanner from '../../components/Login/AppBanner'
+import AppBanner from '../../components/Common/AppBanner'
 
 const Register = () => {
   useEffect(() => {
