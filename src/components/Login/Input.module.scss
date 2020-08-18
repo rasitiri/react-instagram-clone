@@ -1,4 +1,5 @@
 $white: #fafafa;
+$border-color: rgb(219, 219, 219);
 
 .formItem {
   background-color: $white;
@@ -6,7 +7,7 @@ $white: #fafafa;
 
   & > input {
     height: 2.2rem;
-    border: 1px solid #ccc;
+    border: 1px solid $border-color;
     border-radius: 3px;
     width: 16rem;
     outline: none;

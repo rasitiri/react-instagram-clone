@@ -1,11 +1,9 @@
 import React from 'react'
-import classes from './Form-Element.module.scss'
+import classes from './Input.module.scss'
 
 const Input = props => (
   <div className={classes.formItem}>
-    <input
-      {...props}
-    />
+    <input {...props} />
   </div>
 )
 

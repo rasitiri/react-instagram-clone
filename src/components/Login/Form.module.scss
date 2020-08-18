@@ -1,24 +1,92 @@
 $white: #ffffff;
+$border-color: rgb(219, 219, 219);
 
 .formContainer {
   background-color: $white;
-  border: 1px solid #ccc;
+  border: 1px solid $border-color;
   margin: 10px auto;
   width: 350px;
   display: flex;
   flex-direction: column;
 
+  & .form {
+    background-color: $white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    & > button {
+      width: 16rem;
+      margin: 13px auto 0;
+      border: none;
+      color: white;
+      background-color: #0095f6;
+      padding: 7px 15px;
+      font-weight: 800;
+      font-size: 14px;
+      border-radius: 4px;
+      outline: none;
+      cursor: pointer;
+
+      &:disabled {
+        background-color: #b2dffc;
+        cursor: auto;
+      }
+    }
+  }
+
   & > img {
     background-color: $white;
-    width: 200px;
+    width: 170px;
     margin: 0 auto;
-    padding: 20px 0;
+    padding: 35px 0 30px;
   }
 }
 
-.form {
+.or {
+  & * {
+    background-color: $white;
+  }
+
+  display: block;
+  margin-bottom: 15px;
+  padding: 0 45px;
   background-color: $white;
+
+  & > h2 {
+    font-size: 15px;
+    text-align: center;
+    border-bottom: 1px solid $border-color;
+    position: relative;
+
+    & > span {
+      background-color: $white;
+      position: relative;
+      top: 8px;
+      padding: 0 20px;
+      font-size: 13px;
+      color: #8e8e9c;
+    }
+  }
+}
+
+.facebook {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  align-items: center;
+  background-color: $white;
+  margin: 15px auto;
+
+  & img {
+    width: 17px;
+  }
+
+  & a {
+    background-color: $white;
+    text-decoration: none;
+    color: #385185;
+    font-size: 13px;
+    letter-spacing: .02rem;
+    font-weight: 800;
+    margin: 0 8px;
+  }
 }
