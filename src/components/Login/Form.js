@@ -1,7 +1,7 @@
 import React from 'react'
 import classes from './Form.module.scss'
-import instagramTextPNG from './instagram.png'
-import facebookPNG from './facebook.png'
+import instagramTextPNG from './images/instagram.png'
+import facebookPNG from './images/facebook.png'
 import Input from './Input'
 import { Link } from 'react-router-dom'
 
