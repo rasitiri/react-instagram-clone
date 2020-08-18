@@ -3,6 +3,7 @@ import classes from './Form.module.scss'
 import instagramTextPNG from './instagram.png'
 import facebookPNG from './facebook.png'
 import Input from './Input'
+import { Link } from 'react-router-dom'
 
 const Form = () => {
   return (
@@ -25,6 +26,9 @@ const Form = () => {
       <div className={classes.facebook}>
         <img src={facebookPNG} alt="facebook"/>
         <a href="https://www.facebook.com">Log in with Facebook</a>
+      </div>
+      <div className={classes.forgotPassword}>
+        <Link to="/reset-password">Forgot password?</Link>
       </div>
     </div>
   )

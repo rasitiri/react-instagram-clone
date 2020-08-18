@@ -1,0 +1,26 @@
+$border-color: rgb(219, 219, 219);
+
+.signUpLinkcontainer {
+  & * {
+    background-color: white;
+  }
+
+  padding: 20px 30px;
+  display: flex;
+  width: 350px;
+  margin: 0 auto;
+  background-color: white;
+  border: 1px solid $border-color;
+
+  & > p {
+    font-size: 13.5px;
+    margin: 0 auto;
+    color: rgb(38, 38, 38);
+
+    & > a {
+      text-decoration: none;
+      color: rgb(0, 149, 246);
+      font-weight: 600;
+    }
+  }
+}

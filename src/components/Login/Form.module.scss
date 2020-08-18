@@ -85,8 +85,20 @@ $border-color: rgb(219, 219, 219);
     text-decoration: none;
     color: #385185;
     font-size: 13px;
-    letter-spacing: .02rem;
+    letter-spacing: 0.02rem;
     font-weight: 800;
     margin: 0 8px;
+  }
+}
+
+.forgotPassword {
+  background-color: $white;
+  margin: 0 auto 15px;
+
+  & *{
+    background-color: $white;
+    text-decoration: none;
+    color: #00376b;
+    font-size: .7rem;
   }
 }
