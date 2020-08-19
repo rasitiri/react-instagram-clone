@@ -5,18 +5,14 @@ import Register from './views/Register/Register'
 import ResetPassword from './views/ResetPassword/ResetPassword'
 import Home from './views/Home/Home'
 import firebase from './firebase'
-import { useDispatch } from 'react-redux'
-import { setAuthStatus } from './store/authentication/actions'
 import ProtectedRoute from './ProtectedRoute'
 import Loading from './components/Loading/Loading'
 
 const App = () => {
   const [firebaseInitialized, setFirebaseInitialized] = useState(false)
-  const dispatch = useDispatch()
 
   useEffect(() => {
     firebase.isInitialized().then(val => {
-      dispatch(setAuthStatus(true))
       setFirebaseInitialized(val)
     })
   })
