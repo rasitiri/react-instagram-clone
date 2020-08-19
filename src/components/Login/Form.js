@@ -28,7 +28,7 @@ const Form = () => {
       .login(email, password)
       .then(() => {
         dispatch(signInSuccess())
-        history.push('/home')
+        history.push('/')
       })
       .catch(err => {
         setEmail('')

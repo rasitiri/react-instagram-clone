@@ -21,7 +21,7 @@ const App = () => {
     <div>
       <BrowserRouter>
         <Switch>
-          <ProtectedRoute path="/home" component={Home} />
+          <ProtectedRoute path="/" exact component={Home} />
           <Route path="/login" component={Login} />
           <Route path="/signup" component={Register} />
           <Route path="/reset-password" component={ResetPassword} />

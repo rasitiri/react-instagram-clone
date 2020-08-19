@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import firebase from '../../firebase'
 import { useSelector, useDispatch } from 'react-redux'
 import { setAuthStatus } from '../../store/authentication/actions'
+import Navbar from '../../components/Navbar/Navbar'
 
 const Home = () => {
   const [isAuth, setIsAuth] = useState(false)
@@ -19,6 +20,7 @@ const Home = () => {
 
   return (
     <div>
+      <Navbar></Navbar>
       <h1>Home Page</h1>
       <h2>Status: {isAuth ? 'Giriş yapılmış ' : 'Giriş yapılMAMIŞ'}</h2>
       <h3>User: {firebase.getCurrentUserInfo()}</h3>
