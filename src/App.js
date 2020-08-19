@@ -8,6 +8,7 @@ import firebase from './firebase'
 import { useDispatch } from 'react-redux'
 import { setAuthStatus } from './store/authentication/actions'
 import ProtectedRoute from './ProtectedRoute'
+import Loading from './components/Loading/Loading'
 
 const App = () => {
   const [firebaseInitialized, setFirebaseInitialized] = useState(false)
@@ -32,7 +33,7 @@ const App = () => {
       </BrowserRouter>
     </div>
   ) : (
-    <div>Loading...</div>
+    <Loading />
   )
 }
 
