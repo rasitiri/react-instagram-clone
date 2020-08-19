@@ -10,6 +10,7 @@ import {
   resetState,
   signUpSuccess,
   signUpFailure,
+  signUpRequest,
 } from '../../store/authentication/actions'
 import { useHistory } from 'react-router-dom'
 import firebase from '../../firebase'
@@ -24,6 +25,7 @@ const Form = () => {
 
   const onSignUp = e => {
     e.preventDefault()
+    dispatch(signUpRequest())
     firebase
       .register(email, name, password)
       .then(() => {

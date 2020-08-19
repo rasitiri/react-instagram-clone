@@ -3,6 +3,9 @@ import {
   SIGN_UP_SUCCESS,
   SIGN_UP_FAILURE,
   RESET_STATE,
+  SIGN_IN_REQUEST,
+  SIGN_IN_SUCCESS,
+  SIGN_IN_FAILURE,
 } from './actionTypes'
 
 const initialState = {
@@ -27,6 +30,26 @@ const authReducer = (state = initialState, action) => {
         isLoggedIn: true,
       }
     case SIGN_UP_FAILURE:
+      return {
+        ...state,
+        isLoading: false,
+        isLoggedIn: false,
+        error: action.payload.error,
+      }
+    case SIGN_IN_REQUEST:
+      return {
+        ...state,
+        isLoggedIn: false,
+        isLoading: true,
+        error: null,
+      }
+    case SIGN_IN_SUCCESS:
+      return {
+        ...state,
+        isLoading: false,
+        isLoggedIn: true,
+      }
+    case SIGN_IN_FAILURE:
       return {
         ...state,
         isLoading: false,

@@ -3,6 +3,9 @@ import {
   SIGN_UP_SUCCESS,
   SIGN_UP_FAILURE,
   RESET_STATE,
+  SIGN_IN_REQUEST,
+  SIGN_IN_SUCCESS,
+  SIGN_IN_FAILURE,
 } from './actionTypes'
 
 export const signUpRequest = () => ({
@@ -15,6 +18,19 @@ export const signUpSuccess = () => ({
 
 export const signUpFailure = error => ({
   type: SIGN_UP_FAILURE,
+  payload: { error },
+})
+
+export const signInRequest = () => ({
+  type: SIGN_IN_REQUEST,
+})
+
+export const signInSuccess = () => ({
+  type: SIGN_IN_SUCCESS,
+})
+
+export const signInFailure = error => ({
+  type: SIGN_IN_FAILURE,
   payload: { error },
 })
 
