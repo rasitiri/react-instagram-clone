@@ -3,7 +3,7 @@ import classes from './Form.module.scss'
 import instagramTextPNG from '../../assets/images/instagram.png'
 import facebookPNG from '../../assets/images/facebook.png'
 import Input from '../Common/Input'
-import { Link } from 'react-router-dom'
+import { Link, useHistory } from 'react-router-dom'
 import Button from '../Common/Button'
 import Divider from '../Common/Divider'
 import { useDispatch, useSelector } from 'react-redux'
@@ -19,14 +19,22 @@ const Form = () => {
   const [password, setPassword] = useState('')
   const dispatch = useDispatch()
   const error = useSelector(state => state.authReducer.error)
+  const history = useHistory()
 
   const onLogin = e => {
     e.preventDefault()
     dispatch(signInRequest)
     firebase
       .login(email, password)
-      .then(() => dispatch(signInSuccess()))
-      .catch(err => dispatch(signInFailure(err.message)))
+      .then(() => {
+        dispatch(signInSuccess())
+        history.push('/home')
+      })
+      .catch(err => {
+        setEmail('')
+        setPassword('')
+        dispatch(signInFailure(err.message))
+      })
   }
 
   return (
@@ -37,12 +45,14 @@ const Form = () => {
           type="email"
           required
           placeholder="Phone number, username, or email"
+          value={email}
           onChange={e => setEmail(e.target.value)}
         />
         <Input
           type="password"
           required
           placeholder="Password"
+          value={password}
           onChange={e => setPassword(e.target.value)}
         />
         <Button text="Log In" type="submit" />

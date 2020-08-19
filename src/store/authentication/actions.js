@@ -6,6 +6,7 @@ import {
   SIGN_IN_REQUEST,
   SIGN_IN_SUCCESS,
   SIGN_IN_FAILURE,
+  SET_AUTH_STATUS,
 } from './actionTypes'
 
 export const signUpRequest = () => ({
@@ -36,4 +37,9 @@ export const signInFailure = error => ({
 
 export const resetState = () => ({
   type: RESET_STATE,
+})
+
+export const setAuthStatus = status => ({
+  type: SET_AUTH_STATUS,
+  payload: { status },
 })

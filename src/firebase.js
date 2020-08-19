@@ -33,6 +33,20 @@ class Firebase {
   logout() {
     return this.auth.signOut()
   }
+
+  isAuthenticated() {
+    const user = this.auth.currentUser
+
+    return user != null ? true : false
+  }
+
+  getCurrentUserInfo() {
+    return this.auth.currentUser && this.auth.currentUser.displayName
+  }
+
+  isInitialized() {
+    return new Promise(resolve => this.auth.onAuthStateChanged(resolve))
+  }
 }
 
 export default new Firebase()
