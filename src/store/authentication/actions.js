@@ -2,8 +2,8 @@ import {
   SIGN_UP_REQUEST,
   SIGN_UP_SUCCESS,
   SIGN_UP_FAILURE,
+  RESET_STATE,
 } from './actionTypes'
-import firebase from '../../firebase'
 
 export const signUpRequest = () => ({
   type: SIGN_UP_REQUEST,
@@ -18,12 +18,6 @@ export const signUpFailure = error => ({
   payload: { error },
 })
 
-export const signUp = (email, name, password) => {
-  return dispatch => {
-    dispatch(signUpRequest())
-    firebase
-      .register(email, name, password)
-      .then(() => dispatch(signUpSuccess))
-      .catch(err => dispatch(signUpFailure(err.message)))
-  }
-}
+export const resetState = () => ({
+  type: RESET_STATE,
+})
