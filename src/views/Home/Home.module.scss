@@ -1,0 +1,27 @@
+.content {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  padding: 0 15.5%;
+  gap: 1rem;
+  margin-top: 30px;
+
+  & .fieldOne {
+    grid-column: span 2 / span 2;
+  }
+
+  & .fieldTwo {
+    grid-column: span 1 / span 1;
+  }
+}
+
+@media (max-width: 800px) and (min-width: 200px) {
+  .content {
+    & .fieldOne {
+      grid-column: span 3 / span 3;
+    }
+
+    & .fieldTwo {
+      grid-column: span 3 / span 3;
+    }
+  }
+}

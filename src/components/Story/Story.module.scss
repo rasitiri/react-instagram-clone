@@ -1,0 +1,35 @@
+$white: #ffffff;
+$border-color: rgb(219, 219, 219);
+
+.storyContainer {
+  border: 1px solid $border-color;
+  background-color: $white;
+  width: 100%;
+  height: 110px;
+  border-radius: 3px;
+  display: flex;
+  align-items: center;
+  padding: 0 13px;
+  justify-content: space-around;
+
+  & .storyItem {
+    display: flex;
+    flex-direction: column;
+    background-color: $white;
+
+    & > img {
+      width: 61px;
+      height: 61px;
+      border-radius: 100px;
+      border: 2px solid rgb(225, 48, 108);
+      padding: 2px;
+    }
+
+    & > span {
+      margin: 1px auto;
+      background-color: $white;
+      font-size: 11.5px;
+      color: rgb(38,38,38);
+    }
+  }
+}
