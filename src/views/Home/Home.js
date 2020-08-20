@@ -3,6 +3,7 @@ import Navbar from '../../components/Navbar/Navbar'
 import Menu from '../../components/Navbar/Menu'
 import classes from './Home.module.scss'
 import Story from '../../components/Story/Story'
+import Suggestions from '../../components/Suggestions/Suggestions'
 
 const Home = () => {
   return (
@@ -13,7 +14,9 @@ const Home = () => {
         <div className={classes.fieldOne}>
           <Story></Story>
         </div>
-        <div className={classes.fieldTwo}>Field 2</div>
+        <div className={classes.fieldTwo}>
+          <Suggestions></Suggestions>
+        </div>
       </div>
     </div>
   )
