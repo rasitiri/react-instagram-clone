@@ -25,3 +25,9 @@
     }
   }
 }
+
+@media (max-width:1350px) and (min-width:0px){
+  .fieldTwo{
+    display: none;
+  }
+}

@@ -1,0 +1,129 @@
+$white: #ffffff;
+$border-color: rgb(219, 219, 219);
+
+.postContainer {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid $border-color;
+  background-color: $white;
+  width: 610px;
+  margin-bottom: 60px;
+
+  & .postTitle {
+    display: flex;
+    align-items: center;
+    background-color: $white;
+    border-bottom: 1px solid $border-color;
+    padding: 12px 6px;
+
+    & > img {
+      width: 35px;
+      border-radius: 99px;
+    }
+
+    & > span {
+      font-size: 14px;
+      font-weight: 600;
+      color: rgb(38, 38, 38);
+      background-color: $white;
+      margin: 0 10px;
+    }
+  }
+
+  & > span{
+    margin: 8px 0;
+    margin-left: 10px;
+    background-color: white;
+    color: rgb(142,142,142);
+    font-size: 10px;
+    font-weight: 400;
+  }
+}
+
+.postContent {
+  & > img {
+    max-width: 608px;
+    object-fit: cover;
+  }
+}
+
+.postStats {
+  padding: 10px 3px;
+  background-color: white;
+
+  & * {
+    background-color: white;
+  }
+
+  & .icons {
+    display: flex;
+    align-items: center;
+
+    & .likeCommentSend {
+      display: flex;
+      align-items: center;
+
+      & > * {
+        margin: 0 6px;
+      }
+    }
+
+    & > svg {
+      margin-left: auto;
+      margin-right: 5px;
+    }
+  }
+
+  & .likeCount {
+    font-size: 14px;
+    font-weight: 600;
+    color: rgb(38, 38, 38);
+    margin: 8px;
+  }
+}
+
+.postDescription{
+  display: flex;
+  margin-left: 10px;
+  & * {
+    background-color: white;
+  }
+
+  & > p{
+    font-size:14px;
+    color: rgb(38,38,38);
+    font-weight: 400;
+
+    & > span{
+      font-weight: 600;
+      margin-right: 10px;
+    }
+  }
+}
+
+.commentField{
+  border-top: 1px solid $border-color;
+  background-color: white;
+  display: flex;
+  align-items: center;
+
+  & > input{
+    width: 100%;
+    outline: none;
+    border: none;
+    background-color: white;
+    padding: 20px 12px;
+
+    &::placeholder{
+      font-size: 14px;
+    }
+  }
+
+  & > span{
+    color: rgb(0,149,246);
+    background-color: white;
+    margin:0 10px;
+    font-weight: 600;
+    font-size: 14px;
+  }
+}

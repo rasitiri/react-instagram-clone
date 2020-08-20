@@ -1,6 +1,8 @@
 .suggestionsContainer {
   display: flex;
   flex-direction: column;
+  position: sticky;
+  top:12%;
 
   & .userPhoto {
     display: flex;
@@ -53,4 +55,10 @@
 .userSuggestions {
   display: flex;
   flex-direction: column;
+}
+
+@media (max-width:1350px) and (min-width:0px){
+  .suggestionsContainer{
+    display: none;
+  }
 }

@@ -12,6 +12,9 @@ $border-color: rgb(219, 219, 219);
   border-bottom: 1px solid $border-color;
   padding: 5px 140px;
   justify-content: space-around;
+  position: sticky;
+  top:0;
+  z-index: 999;
 
   & .logo {
     & > img {
