@@ -7,6 +7,7 @@ import {
   SIGN_IN_SUCCESS,
   SIGN_IN_FAILURE,
   SET_AUTH_STATUS,
+  SET_MENU_OPEN,
 } from './actionTypes'
 
 export const signUpRequest = () => ({
@@ -42,4 +43,8 @@ export const resetState = () => ({
 export const setAuthStatus = status => ({
   type: SET_AUTH_STATUS,
   payload: { status },
+})
+
+export const setMenuOpen = () => ({
+  type: SET_MENU_OPEN,
 })

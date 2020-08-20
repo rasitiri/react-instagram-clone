@@ -7,12 +7,14 @@ import {
   SIGN_IN_SUCCESS,
   SIGN_IN_FAILURE,
   SET_AUTH_STATUS,
+  SET_MENU_OPEN,
 } from './actionTypes'
 
 const initialState = {
   isLoggedIn: false,
   isLoading: true,
   error: null,
+  isOpen: false,
 }
 
 const authReducer = (state = initialState, action) => {
@@ -61,6 +63,11 @@ const authReducer = (state = initialState, action) => {
       return {
         ...state,
         isLoggedIn: action.payload.status,
+      }
+    case SET_MENU_OPEN:
+      return {
+        ...state,
+        isOpen: !state.isOpen,
       }
     case RESET_STATE:
       return {}

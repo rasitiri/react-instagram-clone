@@ -50,12 +50,34 @@ $border-color: rgb(219, 219, 219);
       background-color: white;
       width: 21px;
       margin-top: 7px;
+      cursor: pointer;
     }
     & img {
       background-color: white;
-      width: 21px;
+      // width: 21px;
+      width: 25px;
+      border: 1px solid #ccc;
       margin-top: 7px;
       border-radius: 50px;
+      cursor: pointer;
+    }
+  }
+}
+
+@media (max-width:800px) and (min-width:200px){
+  .navbarContainer{
+    flex-direction: column;
+
+    & .search{
+      margin: 0;
+
+      & > input{
+        margin: 0 auto;
+      }
+    }
+
+    & .icons{
+      margin: 5px auto;
     }
   }
 }

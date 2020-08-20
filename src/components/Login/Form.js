@@ -28,13 +28,11 @@ const Form = () => {
     firebase
       .login(email, password)
       .then(() => {
-        console.log('başarılı')
         dispatch(signInSuccess())
         dispatch(setAuthStatus(true))
         history.push('/')
       })
       .catch(err => {
-        console.log('err:', err)
         setEmail('')
         setPassword('')
         dispatch(setAuthStatus(false))
