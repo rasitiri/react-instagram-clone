@@ -4,18 +4,18 @@ $border-color: rgb(219, 219, 219);
 .storyContainer {
   border: 1px solid $border-color;
   background-color: $white;
-  width: 100%;
   height: 110px;
   border-radius: 3px;
   display: flex;
+  flex-shrink: 0;
   align-items: center;
-  padding: 0 13px;
-  justify-content: space-around;
+  padding: 0 10px;
 
   & .storyItem {
     display: flex;
     flex-direction: column;
     background-color: $white;
+    margin: 0 10px;
 
     & > img {
       width: 61px;
@@ -29,7 +29,12 @@ $border-color: rgb(219, 219, 219);
       margin: 1px auto;
       background-color: $white;
       font-size: 11.5px;
-      color: rgb(38,38,38);
+      color: rgb(38, 38, 38);
     }
+  }
+}
+.carousel {
+  & * {
+    background-color: white;
   }
 }

@@ -50,7 +50,11 @@ const Suggestions = () => {
         </div>
         <div className={classes.userSuggestions}>
           {dummy.map(user => (
-            <User username={user.username} imgUrl={user.imgUrl} />
+            <User
+              username={user.username}
+              imgUrl={user.imgUrl}
+              key={user.username}
+            />
           ))}
         </div>
       </div>

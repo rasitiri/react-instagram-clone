@@ -4,7 +4,7 @@ import classes from './User.module.scss'
 const User = ({ imgUrl, username }) => (
   <div className={classes.userItem}>
     <div className={classes.userImg}>
-      <img src={imgUrl} alt="" />
+      <img src={imgUrl} alt={username} />
     </div>
     <div className={classes.usernameAndName}>
       <p>{username}</p>
