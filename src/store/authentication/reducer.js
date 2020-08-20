@@ -28,7 +28,7 @@ const authReducer = (state = initialState, action) => {
       return {
         ...state,
         isLoading: false,
-        isLoggedIn: true,
+        isLoggedIn: false,
       }
     case SIGN_UP_FAILURE:
       return {

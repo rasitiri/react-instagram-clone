@@ -1,13 +1,12 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 import Input from '../Common/Input'
 import Button from '../Common/Button'
 import Divider from '../Common/Divider'
 import instagramTextPNG from '../../assets/images/instagram.png'
 import facebookPNG from '../../assets/images/facebook-white.png'
 import classes from './Form.module.scss'
-import { useDispatch, useSelector } from 'react-redux'
+import { useDispatch } from 'react-redux'
 import {
-  resetState,
   signUpSuccess,
   signUpFailure,
   signUpRequest,
@@ -19,8 +18,8 @@ const Form = () => {
   const [email, setEmail] = useState('')
   const [name, setName] = useState('')
   const [password, setPassword] = useState('')
+  const [error, setError] = useState('')
   const dispatch = useDispatch()
-  const error = useSelector(state => state.authReducer.error)
   const history = useHistory()
 
   const onSignUp = e => {
@@ -32,12 +31,11 @@ const Form = () => {
         dispatch(signUpSuccess())
         history.push('/login')
       })
-      .catch(err => dispatch(signUpFailure(err.message)))
+      .catch(err => {
+        dispatch(signUpFailure(err.message))
+        setError(err.message)
+      })
   }
-
-  useEffect(() => {
-    return () => history.listen((location, action) => dispatch(resetState()))
-  })
 
   return (
     <form className={classes.formContainer} onSubmit={onSignUp}>

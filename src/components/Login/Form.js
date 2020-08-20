@@ -6,19 +6,20 @@ import Input from '../Common/Input'
 import { Link, useHistory } from 'react-router-dom'
 import Button from '../Common/Button'
 import Divider from '../Common/Divider'
-import { useDispatch, useSelector } from 'react-redux'
+import { useDispatch } from 'react-redux'
 import {
   signInRequest,
   signInSuccess,
   signInFailure,
+  setAuthStatus,
 } from '../../store/authentication/actions'
 import firebase from '../../firebase'
 
 const Form = () => {
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
+  const [error, setError] = useState('')
   const dispatch = useDispatch()
-  const error = useSelector(state => state.authReducer.error)
   const history = useHistory()
 
   const onLogin = e => {
@@ -27,13 +28,18 @@ const Form = () => {
     firebase
       .login(email, password)
       .then(() => {
+        console.log('başarılı')
         dispatch(signInSuccess())
+        dispatch(setAuthStatus(true))
         history.push('/')
       })
       .catch(err => {
+        console.log('err:', err)
         setEmail('')
         setPassword('')
+        dispatch(setAuthStatus(false))
         dispatch(signInFailure(err.message))
+        setError(err.message)
       })
   }
 
