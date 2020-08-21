@@ -13,7 +13,7 @@ $border-color: rgb(219, 219, 219);
   padding: 5px 140px;
   justify-content: space-around;
   position: sticky;
-  top:0;
+  top: 0;
   z-index: 999;
 
   & .logo {
@@ -67,20 +67,20 @@ $border-color: rgb(219, 219, 219);
   }
 }
 
-@media (max-width:800px) and (min-width:200px){
-  .navbarContainer{
+@media (max-width: 800px) and (min-width: 200px) {
+  .navbarContainer {
     flex-direction: column;
 
-    & .search{
+    & .search {
       margin: 0;
 
-      & > input{
+      & > input {
         margin: 0 auto;
       }
     }
 
-    & .icons{
-      margin: 5px auto;
+    & .icons {
+      justify-content: space-between;
     }
   }
 }

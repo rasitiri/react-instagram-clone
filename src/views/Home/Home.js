@@ -44,9 +44,9 @@ const Home = () => {
         'https://images.pexels.com/users/avatars/369193/fabian-wiktor-985.jpeg?w=256&h=256&fit=crop&auto=compress',
       photo:
         'https://images.pexels.com/photos/994605/pexels-photo-994605.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
-        likeCount: 921,
-        description:'on beach...',
-        sharedAt: '10 Jan 2020'
+      likeCount: 921,
+      description: 'on beach...',
+      sharedAt: '10 Jan 2020',
     },
   ]
 
@@ -57,9 +57,16 @@ const Home = () => {
       <div className={classes.content}>
         <div className={classes.fieldOne}>
           <Story></Story>
-          <div style={{ margin: '15px 0' }}>
+          <div
+            style={{
+              margin: '15px 0',
+              display: 'flex',
+              flexDirection: 'column',
+            }}
+          >
             {dummy.map(data => (
               <Post
+                key={data.username}
                 username={data.username}
                 photo={data.photo}
                 userPhoto={data.userPhoto}

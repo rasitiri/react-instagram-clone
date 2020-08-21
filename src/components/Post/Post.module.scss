@@ -130,3 +130,9 @@ $border-color: rgb(219, 219, 219);
     font-size: 14px;
   }
 }
+
+@media (max-width: 800px) and (min-width: 200px) {
+  .postContainer {
+    margin: 0 auto 60px;
+  }
+}

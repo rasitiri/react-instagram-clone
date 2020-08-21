@@ -26,8 +26,14 @@
   }
 }
 
-@media (max-width:1350px) and (min-width:0px){
-  .fieldTwo{
+@media (max-width: 1350px) and (min-width: 0px) {
+  .fieldTwo {
     display: none;
+  }
+}
+
+@media (max-width: 800px) and (min-width: 200px) {
+  .content {
+    padding: 0 1rem;
   }
 }
