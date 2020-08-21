@@ -1,19 +1,19 @@
 import React from 'react'
 import classes from './Post.module.scss'
-import exampleImage from './example.jpg'
+// import exampleImage from './example.jpg'
 
-const Post = () => {
+const Post = ({username, userPhoto, photo, description, likeCount, sharedAt}) => {
   return (
     <div className={classes.postContainer}>
       <div className={classes.postTitle}>
         <img
-          src="https://scontent-ort2-1.cdninstagram.com/v/t51.2885-19/66710300_658990501252314_3782977524682719232_n.jpg?_nc_ht=scontent-ort2-1.cdninstagram.com&_nc_ohc=BTC67_kKZFAAX_K9o7c&oh=b3f7d74e602d977442dbe2f80babaca1&oe=5F6A06FA"
+          src={userPhoto}
           alt=""
         />
-        <span>username</span>
+        <span>{username}</span>
       </div>
       <div className={classes.postContent}>
-        <img src={exampleImage} alt="" />
+        <img src={photo} alt="" />
       </div>
       <div className={classes.postStats}>
         <div className={classes.icons}>
@@ -64,19 +64,16 @@ const Post = () => {
           </svg>
         </div>
         <div className={classes.likeCount}>
-          <p>2,401 likes</p>
+          <p>{likeCount} likes</p>
         </div>
       </div>
       <div className={classes.postDescription}>
         <p>
-          <span>username</span>
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perspiciatis
-          rerum tempora adipisci ratione eum? Earum ratione commodi soluta,
-          eligendi voluptatibus voluptatem adipisci, architecto in id unde esse
-          laudantium, nostrum sunt!
+          <span>{username}</span>
+          {description}
         </p>
       </div>
-      <span>3 HOURS AGO</span>
+      <span>{sharedAt}</span>
       <div className={classes.commentField}>
         <input type="text" placeholder="Add a comment..." />
         <span>Post</span>

@@ -30,11 +30,11 @@ $border-color: rgb(219, 219, 219);
     }
   }
 
-  & > span{
+  & > span {
     margin: 8px 0;
     margin-left: 10px;
     background-color: white;
-    color: rgb(142,142,142);
+    color: rgb(142, 142, 142);
     font-size: 10px;
     font-weight: 400;
   }
@@ -78,51 +78,54 @@ $border-color: rgb(219, 219, 219);
     font-size: 14px;
     font-weight: 600;
     color: rgb(38, 38, 38);
-    margin: 8px;
+    margin: 8px 8px 0px;
   }
 }
 
-.postDescription{
+.postDescription {
   display: flex;
   margin-left: 10px;
+  background-color: white;
+
   & * {
     background-color: white;
   }
 
-  & > p{
-    font-size:14px;
-    color: rgb(38,38,38);
+  & > p {
+    font-size: 13px;
+    color: rgb(38, 38, 38);
     font-weight: 400;
 
-    & > span{
+    & > span {
       font-weight: 600;
-      margin-right: 10px;
+      margin-right: 7px;
+      background-color: white;
     }
   }
 }
 
-.commentField{
+.commentField {
   border-top: 1px solid $border-color;
   background-color: white;
   display: flex;
   align-items: center;
 
-  & > input{
+  & > input {
     width: 100%;
     outline: none;
     border: none;
     background-color: white;
     padding: 20px 12px;
 
-    &::placeholder{
+    &::placeholder {
       font-size: 14px;
     }
   }
 
-  & > span{
-    color: rgb(0,149,246);
+  & > span {
+    color: rgb(0, 149, 246);
     background-color: white;
-    margin:0 10px;
+    margin: 0 10px;
     font-weight: 600;
     font-size: 14px;
   }
