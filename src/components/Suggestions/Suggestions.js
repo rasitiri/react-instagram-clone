@@ -1,6 +1,7 @@
 import React from 'react'
 import classes from './Suggestions.module.scss'
 import User from './User'
+import { Link } from 'react-router-dom'
 
 const Suggestions = () => {
   const dummy = [
@@ -39,7 +40,9 @@ const Suggestions = () => {
           alt=""
         />
         <div>
-          <p>irirasit</p>
+          <p>
+            <Link to="/profile">irirasit</Link>
+          </p>
           <span>Raşit İri</span>
         </div>
       </div>

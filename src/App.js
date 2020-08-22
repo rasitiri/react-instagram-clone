@@ -7,6 +7,7 @@ import Home from './views/Home/Home'
 import firebase from './firebase'
 import ProtectedRoute from './ProtectedRoute'
 import Loading from './components/Loading/Loading'
+import Profile from './views/Profile/Profile'
 
 const App = () => {
   const [firebaseInitialized, setFirebaseInitialized] = useState(false)
@@ -24,6 +25,7 @@ const App = () => {
           <ProtectedRoute path="/" exact component={Home} />
           <Route path="/login" component={Login} />
           <Route path="/signup" component={Register} />
+          <Route path="/profile" component={Profile} />
           <Route path="/reset-password" component={ResetPassword} />
         </Switch>
       </BrowserRouter>

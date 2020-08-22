@@ -2,7 +2,7 @@ import React from 'react'
 import classes from './Menu.module.scss'
 import { useSelector, useDispatch } from 'react-redux'
 import firebase from '../../firebase'
-import { useHistory } from 'react-router-dom'
+import { useHistory, Link } from 'react-router-dom'
 import { setAuthStatus, setMenuOpen } from '../../store/authentication/actions'
 
 const Menu = () => {
@@ -20,7 +20,14 @@ const Menu = () => {
   return isOpen === true ? (
     <div className={classes.menuContainer}>
       <div className={classes.square}></div>
-      <span>Profile ({firebase.getCurrentUserInfo()})</span>
+      <span>
+        <Link
+          to="/profile"
+          style={{ textDecoration: 'none', color: 'rgb(38,38,38)' }}
+        >
+          <span>Profile ({firebase.getCurrentUserInfo()})</span>
+        </Link>
+      </span>
       <span>Saved</span>
       <span>Settings</span>
       <span className={classes.logout} onClick={onLogout}>

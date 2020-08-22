@@ -2,7 +2,7 @@ $white: #ffffff;
 $border-color: rgb(219, 219, 219);
 
 .navbarContainer {
-  & > * {
+  > * {
     background-color: $white;
   }
 
@@ -16,16 +16,17 @@ $border-color: rgb(219, 219, 219);
   top: 0;
   z-index: 999;
 
-  & .logo {
-    & > img {
+  .logo {
+    background-color: $white;
+    > img {
       background-color: transparent;
       width: 110px;
       margin-top: 7px;
     }
   }
 
-  & .search {
-    & > input {
+  .search {
+    > input {
       background-color: #fafafa;
       border: 1px solid $border-color;
       border-radius: 3px;
@@ -42,20 +43,20 @@ $border-color: rgb(219, 219, 219);
     }
   }
 
-  & .icons {
+  .icons {
     display: flex;
 
-    & > * {
+    > * {
       margin: 0 12px;
       background-color: white;
     }
-    & svg {
+    svg {
       background-color: white;
       width: 21px;
       margin-top: 7px;
       cursor: pointer;
     }
-    & img {
+    img {
       background-color: white;
       // width: 21px;
       width: 25px;
@@ -71,15 +72,15 @@ $border-color: rgb(219, 219, 219);
   .navbarContainer {
     flex-direction: column;
 
-    & .search {
+    .search {
       margin: 0;
 
-      & > input {
+      > input {
         margin: 0 auto;
       }
     }
 
-    & .icons {
+    .icons {
       justify-content: space-between;
     }
   }
