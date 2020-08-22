@@ -1,0 +1,80 @@
+.profileContainer {
+  padding: 0 15.5%;
+  .userHeader {
+    display: flex;
+    align-items: flex-start;
+    width: 930px;
+    padding: 30px 70px;
+    border-bottom: 1px solid #ccc;
+
+    img {
+      width: 150px;
+      border-radius: 90px;
+    }
+
+    .userInfo {
+      display: flex;
+      flex-direction: column;
+      margin: -14px 100px;
+
+      * {
+        margin: 9px 0;
+      }
+
+      h2 {
+        font-size: 28px;
+        color: rgb(38, 38, 38);
+        font-weight: 300;
+      }
+
+      div > span {
+        margin-right: 30px;
+        font-size: 15.5px;
+        font-weight: 400;
+
+        span {
+          font-size: 16px;
+          color: rgb(38, 38, 38);
+          font-weight: 600;
+        }
+      }
+    }
+
+    span {
+      font-size: 16px;
+      font-weight: 600;
+      color: rgb(38, 38, 38);
+    }
+  }
+
+  .tabs {
+    display: flex;
+    margin: 0 auto;
+    width: 500px;
+    justify-content: space-around;
+    margin-top: 15px;
+
+    span {
+      font-size: 12px;
+      font-weight: 600;
+      color: rgb(142, 142, 142);
+      display: flex;
+      margin: 0 6px;
+      align-items: center;
+    }
+  }
+
+  .photoGrid {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 15px 0;
+    justify-content: space-between;
+
+    img {
+      width: 293px;
+      height: 293px;
+      margin: 10px 0;
+      object-fit: cover;
+    }
+  }
+}
